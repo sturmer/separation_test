@@ -21,7 +21,7 @@ Resource::Resource()
 
 std::string Resource::GetName(const std::string& surname)
 {
-    clog << "Resource::GetName()\n";
+    clog << "Resource::GetName(surname=" << surname << ")\n";
     string res;
     try {
         res = dict_.at(surname);
@@ -32,5 +32,6 @@ std::string Resource::GetName(const std::string& surname)
         cerr << "Unknown exception!\n" << ex.what();
         throw;
     }
+    clog << "res = [" << res << "]\n";
     return res;
 }

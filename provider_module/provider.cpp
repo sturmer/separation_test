@@ -12,3 +12,15 @@ std::string Provider::GetResource(const std::string& name)
     std::clog << "Provider::GetResource()\n";
     return r_->GetName(name);
 }
+
+extern "C" {
+    Provider* create()
+    {
+        return new Provider;
+    }
+
+    void destroy(Provider* p)
+    {
+        delete p;
+    }
+}
