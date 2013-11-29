@@ -17,6 +17,7 @@ Resource::Resource()
     clog << "Resource::Resource()\n";
     dict_["Lovelace"] = "Ada";
     dict_["Wilkes"] = "Mary Allen";
+    dict_["Liskov"] = "Barbara";
 }
 
 std::string Resource::GetName(const std::string& surname)

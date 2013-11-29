@@ -8,7 +8,7 @@ using std::string;
 class ServiceOps
 {
 public:    
-    std::string GetResource(const string& name);
+    string GetResource(const string& name);
 };
 
 #endif // SERVICE_OPERATIONS

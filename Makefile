@@ -1,7 +1,7 @@
 %.o: %.cpp
 	g++ -c -g -Wall -Werror $<
 
-all: libprovider interface.o new_main.o
+all: interface.o new_main.o
 	g++ -L./provider_module/ interface.o new_main.o \
 		-lprovider -o new_provider -ldl
 
